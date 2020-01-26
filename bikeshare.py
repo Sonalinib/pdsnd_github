@@ -41,9 +41,9 @@ def get_filters():
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
     while True:
-      day = input("\nEnter a particular day: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or 'All'?\n").title()
+      day = input("\nEnter a particular day of the week: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or 'All'?\n").title()
       if day not in ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'All'):
-        print("Please enter valid day and try again.")
+        print("Please enter valid day of the week and try again.")
         continue
       else:
         break
@@ -213,21 +213,21 @@ def user_stats(df):
     print('-'*40)
 
 def display(df):
-    """Displays 5 lines of raw data."""
+    """Displays 10 lines of raw data."""
     x=0
-    y=5
-    
-    display_data = input("\nWould you like to see first five rows of raw data? Yes or No?\n").title()
-    
+    y=10
+
+    display_data = input("\nWould you like to see first ten rows of raw data? Yes or No?\n").title()
+
     if display_data == 'Yes':
        while True:
         print(df.iloc[x:y,:])
-        x+=5
-        y+=5
-        
-        next_display_data = input("\nWould you like to see next five rows of raw data?\n").title()
+        x+=10
+        y+=10
+
+        next_display_data = input("\nWould you like to see next ten rows of raw data?\n").title()
         if next_display_data == 'No':
-            break         
+            break
 
 def main():
     while True:
