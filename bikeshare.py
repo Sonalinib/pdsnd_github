@@ -213,19 +213,19 @@ def user_stats(df):
     print('-'*40)
 
 def display(df):
-    """Displays 5 lines of raw data."""
+    """Displays 10 lines of raw data."""
     x=0
-    y=5
+    y=10
 
-    display_data = input("\nWould you like to see first five rows of raw data? Yes or No?\n").title()
+    display_data = input("\nWould you like to see first ten rows of raw data? Yes or No?\n").title()
 
     if display_data == 'Yes':
        while True:
         print(df.iloc[x:y,:])
-        x+=5
-        y+=5
+        x+=10
+        y+=10
 
-        next_display_data = input("\nWould you like to see next five rows of raw data?\n").title()
+        next_display_data = input("\nWould you like to see next ten rows of raw data?\n").title()
         if next_display_data == 'No':
             break
 
